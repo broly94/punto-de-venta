@@ -1,0 +1,17 @@
+Purchase
+
+provider_id
+user_id
+
+purchase_date
+tax
+total
+status
+picture
+
+PurchaseDetails
+
+shopping_id
+product_id
+cuantity
+price
