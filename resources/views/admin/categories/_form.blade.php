@@ -39,7 +39,7 @@
                 <h5>Error</h5>
                 <ul>
                     @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
+                        <li class="fs-6">{{ $error }}</li>
                     @endforeach
                 </ul>
             </div>

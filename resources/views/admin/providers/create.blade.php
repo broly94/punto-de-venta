@@ -16,28 +16,28 @@
     @csrf
     <div class="mb-3">
         <label for="name" class="form-label text-center">Nombre</label>
-        <input type="text" name="name" class="form-control" id="name" aria-describedby="nameCategory">
+        <input type="text" name="name" class="form-control" id="name" aria-describedby="nameCategory" required data-bs-focus maxlength="50">
     </div>
 
     <div class="mb-3">
         <label for="email" class="form-label">Correo</label>
-        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailCategory">
+        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailCategory" maxlength="250">
     </div>
 
     <div class="mb-3">
         <label for="cuil_number" class="form-label">Cuil</label>
         <input type="text" name="cuil_number" class="form-control" id="cuil_number"
-            aria-describedby="cuilNumberCategory">
+            aria-describedby="cuilNumberCategory" maxlength="11">
     </div>
 
     <div class="mb-3">
         <label for="adress" class="form-label">Dirección</label>
-        <input type="text" name="adress" class="form-control" id="adress" aria-describedby="adressCategory">
+        <input type="text" name="adress" class="form-control" id="adress" aria-describedby="adressCategory" maxlength="255">
     </div>
 
     <div class="mb-3">
         <label for="phone" class="form-label">Teléfono</label>
-        <input type="text" name="phone" class="form-control" id="phone" aria-describedby="phoneCategory">
+        <input type="text" name="phone" class="form-control" id="phone" aria-describedby="phoneCategory" maxlength="15">
     </div>
 
     <div class="pt-3">

@@ -24,8 +24,8 @@ class UpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|string|max:200',
-            'email' => 'nullable|email|string|max:250||unique:providers,email,' . $this->route('provider')->id,
+            'name' => 'required|string|max:50|unique:providers,name,' . $this->route('provider')->id,
+            'email' => 'nullable|email|string|max:250|unique:providers,email,' . $this->route('provider')->id,
             'cuil_number' => 'nullable|string|max:11|unique:providers,cuil_number,' . $this->route('provider')->id,
             'adress' => 'nullable|string|max:255|unique:providers,adress,' . $this->route('provider')->id,
             'phone' => 'nullable|string|max:15||unique:providers,phone,' . $this->route('provider')->id
@@ -35,30 +35,27 @@ class UpdateRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => 'Este campo es requerido',
-            'name.string' => 'El valor no es válido',
-            'name.max' => 'Solo se permiten 200 caracteres',
+            'name.required' => 'El nombre es requerido',
+            'name.string' => 'El valor del nombre no es válido',
+            'name.max' => 'El nombre solo permite 50 caracteres',
+            'name.unique' => 'El nombre que intenta ingresar ya existe',
 
+            'email.email' => 'Ingrese un correo electrónico válido',
+            'email.string' => 'El valor del email no es válido',
+            'email.max' => 'El email solo permite 250 caracteres',
+            'email.unique' => 'El email que intenta ingresar ya existe',
 
-            'email.required' => 'Este campo es requerido',
-            'email.email' => 'No es un correo electrónico',
-            'email.string' => 'El valor no es válido',
-            'email.max' => 'Solo se permite 250 caracteres',
-            'email.unique' => 'El email ya está en uso',
+            'cuil_number.string' => 'El valor del cuil no es válido',
+            'cuil_number.max' => 'El cuil solo permite 11 caracteres. Ingrese solo numeros sin singnos',
+            'cuil_number.unique' => 'El cuil que intenta ingresar ya existe',
 
-            'cuil_number.required' => 'Este campo es requerido',
-            'cuil_number.string' => 'El valor no es válido',
-            'cuil_number.max' => 'Solo se permiten 50 caracteres',
-            'cuil_number.unique' => 'El cuil ya está en uso',
-
-            'adress.string' => 'El valor no es válido',
-            'adress.max' => 'Solo se permiten 255 caracteres',
-            'adress.unique' => 'La dirección ya esta en uso',
+            'adress.string' => 'El valor de la dirección no es válida',
+            'adress.max' => 'La dirección solo permite 255 caracteres',
+            'adress.unique' => 'La dirección que intenta ingresar ya existe',
              
-            'phone.required' => 'Este campo es requerido',
-            'phone.string' => 'El valor no es válido',
-            'phone.max' => 'Solo se permiten 9 caracteres',
-            'phone.unique' => 'El teléfono ya esta en uso',
+            'phone.string' => 'El valor del teléfono no es válido',
+            'phone.max' => 'El teléfono solo permite 15 numeros máximo',
+            'phone.unique' => 'El teléfono que intenta ingresar ya existe',
              
         ];
     }

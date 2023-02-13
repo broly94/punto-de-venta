@@ -24,12 +24,12 @@
     @method('PUT')
     <div class="mb-3 d-flex flex-column align-items-start">
         <label for="name" class="form-label">Nombre</label>
-        <input type="text" name="name" class="form-control" id="name" aria-describedby="nameCategory" value="{{ $category->name }}">
+        <input type="text" name="name" class="form-control" id="name" aria-describedby="nameCategory" value="{{ $category->name }}" maxlength="50">
     </div>
 
     <div class="mb-3 d-flex flex-column align-items-start">
         <label for="description" class="form-label">Descripción</label>
-        <textarea name="description" class="form-control" id="description" rows="3">{{ $category->description }}</textarea>
+        <textarea name="description" class="form-control" id="description" rows="3" maxlength="250">{{ $category->description }}</textarea>
     </div>
 
     <div class="pt-3 d-flex flex-row justify-content-start">

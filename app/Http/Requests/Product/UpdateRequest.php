@@ -24,8 +24,8 @@ class UpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|string|max:255|unique:products,name' . $this->route('product')->id,
-            'code' => 'string|max:250|nullable|unique:products,code' . $this->route('product')->id ,
+            'name' => 'required|string|max:255|unique:products,name' . $this->route('product')->name,
+            'code' => 'string|max:250|nullable|unique:products,code' . $this->route('product')->code ,
             'stock' => 'integer',
             'image' => 'nullable',
             'sell_price' => 'required',

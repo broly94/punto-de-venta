@@ -24,7 +24,7 @@ class UpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|string|max:50',
+            'name' => 'required|string|max:50|unique:categories,name,' . $this->route('category')->id,
             'description' => 'nullable|string|max:250'
         ];
     }
@@ -32,11 +32,12 @@ class UpdateRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => 'Este campo es requerido',
-            'name.string' => 'El valor no es válido',
-            'name.max' => 'Solo se permite 50 caracteres',
-            'description.string' => 'El valor no es válido',
-            'description.max' => 'Solo se permite 250 caracteres',
+            'name.required' => 'El nombre de la categoria es requerido',
+            'name.unique' => 'La categoria ingresada ya existe',
+            'name.string' => 'El valor de la categoria no es válido',
+            'name.max' => 'Solo se permite 50 caracteres para el nombre de la categoria',
+            'description.string' => 'El valor de la descripción no es válido',
+            'description.max' => 'Solo se permite 250 caracteres para la descripción',
         ];
     }
 }

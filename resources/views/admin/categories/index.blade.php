@@ -23,6 +23,5 @@
 @stop
 
 @section('scripts')
-    
     @include('my-files.scripts')
 @stop

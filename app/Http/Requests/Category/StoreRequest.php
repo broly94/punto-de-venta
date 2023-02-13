@@ -35,9 +35,10 @@ class StoreRequest extends FormRequest
             'name.required' => 'El nombre de la categoria es requerido',
             'name.unique' => 'La categoria ingresada ya existe',
             'name.string' => 'El valor de la categoria no es válido',
-            'name.max' => 'Solo se permite 50 caracteres ',
-            'description.string' => 'El valor no es válido',
-            'description.max' => 'Solo se permite 250 caracteres',
+            'name.max' => 'Solo se permite 50 caracteres para el nombre de la categoria',
+            
+            'description.string' => 'El valor de la descripción no es válido',
+            'description.max' => 'Solo se permite 250 caracteres para la descripción',
         ];
     }
 }
