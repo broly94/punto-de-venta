@@ -13,15 +13,24 @@
 </head>
 
 <body class="sidebar-fixed">
-    
+
     <div class="container-scroller">
         @yield('navbar')
         @yield('sidebar')
-        @yield('content')
+
+        <div class="main-panel">
+            <div class="content-wrapper">
+                <div class="card-wrapper">
+                    @yield('content')
+                </div>
+            </div>
+        </div>
+        
         @yield('footer')
     </div>
 
     @yield('scripts')
 
 </body>
+
 </html>

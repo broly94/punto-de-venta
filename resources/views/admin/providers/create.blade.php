@@ -1,22 +1,32 @@
 <style>
     #create-form-provider label {
-        font-weight: 500;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 400;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: 1.2rem;
     }
 
     #create-form-provider input {
         font-size: 1rem;
         font-weight: 400;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
+    
+    .fields-require-info p {
+        font-weight: 300;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1.1rem;
+    }
+
 </style>
 
 <form action="{{ route('providers.store') }}" method="POST" id="create-form-provider">
     @csrf
+    <div class="fields-require-info">
+        <p>(*) Campos requeridos</p>
+    </div>
     <div class="mb-3">
-        <label for="name" class="form-label text-center">Nombre</label>
-        <input type="text" name="name" class="form-control" id="name" aria-describedby="nameCategory" required data-bs-focus maxlength="50">
+        <label for="name" class="form-label text-center">Nombre *</label>
+        <input type="text" name="name" class="form-control" id="name" aria-describedby="nameCategory" required maxlength="50">
     </div>
 
     <div class="mb-3">

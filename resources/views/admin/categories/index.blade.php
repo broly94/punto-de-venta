@@ -15,7 +15,7 @@
 @stop
 
 @section('content')
-    @include('admin.categories._form')
+    @include('admin.categories.home')
 @stop
 
 @section('footer')

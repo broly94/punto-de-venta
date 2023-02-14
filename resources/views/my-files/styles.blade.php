@@ -1,8 +1,15 @@
+<link rel="stylesheet" href="{{ asset('melody/css/style.css') }}">
 <link rel="stylesheet" href="{{ asset('melody/vendors/iconfonts/font-awesome/css/all.min.css') }}">
 <link rel="stylesheet" href="{{ asset('melody/vendors/css/vendor.bundle.addons.css') }}">
-<link rel="stylesheet" href="{{ asset('melody/css/style.css') }}">
+
 <link rel="stylesheet" href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css') }}">
+
+<link rel="stylesheet" href="{{ asset('https://cdn.datatables.net/1.13.2/css/dataTables.bootstrap5.min.css') }}"> 
+
 <link rel="stylesheet" href="{{ asset('https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css') }}">
+<link rel="stylesheet" href="{{ asset('melody/css/main-panel/style.css') }}">
+
+
 
 {{-- <link rel="stylesheet" href="{{ asset('melody/vendors/css/vendor.bundle.base.css') }}"> --}}
 {{-- <link rel="stylesheet" href="{{ asset('https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css') }}"> --}}
